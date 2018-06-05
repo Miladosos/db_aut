@@ -1,0 +1,30 @@
+{
+  "yagoFiles": {
+    "Readme.txt": "/mnt/Data/College/Database/Readme.txt",
+    "ConteXtFacts_fa.tsv": "/mnt/Data/College/Database/yagoConteXtFacts_fa.tsv",
+    "Facts.tsv": "/mnt/Data/College/Database/yagoFacts.tsv",
+    "GeonamesOnlyData.tsv": "/mnt/Data/College/Database/yagoGeonamesOnlyData.tsv",
+    "GeonamesTypes.tsv": "/mnt/Data/College/Database/yagoGeonamesTypes.tsv",
+    "InfoboxAttributes_fa.tsv": "/mnt/Data/College/Database/yagoInfoboxAttributes_fa.tsv",
+    "Labels.tsv": "/mnt/Data/College/Database/yagoLabels.tsv",
+    "RedirectLabels_fa.tsv": "/mnt/Data/College/Database/yagoRedirectLabels_fa.tsv",
+    "Schema.tsv": "/mnt/Data/College/Database/yagoSchema.tsv",
+    "SimpleTaxonomy.tsv": "/mnt/Data/College/Database/yagoSimpleTaxonomy.tsv",
+    "Taxonomy.tsv": "/mnt/Data/College/Database/yagoTaxonomy.tsv",
+    "Types.tsv": "/mnt/Data/College/Database/yagoTypes.tsv",
+    "WikipediaInfo_fa.tsv": "/mnt/Data/College/Database/yagoWikipediaInfo_fa.tsv"
+  },
+  "sampleNews": {
+    "203403.csv": "/mnt/Data/College/Database/203403.csv",
+    "412892.csv": "/mnt/Data/College/Database/412892.csv",
+    "418176.csv": "/mnt/Data/College/Database/418176.csv",
+    "466135.csv": "/mnt/Data/College/Database/466135.csv",
+    "497330.csv": "/mnt/Data/College/Database/497330.csv",
+    "525353.csv": "/mnt/Data/College/Database/525353.csv",
+    "540891.csv": "/mnt/Data/College/Database/540891.csv",
+    "571047.csv": "/mnt/Data/College/Database/571047.csv",
+    "572882.csv": "/mnt/Data/College/Database/572882.csv",
+    "575133.csv": "/mnt/Data/College/Database/575133.csv",
+    "600947.csv": "/mnt/Data/College/Database/600947.csv"
+  }
+}
