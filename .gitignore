@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Pycharm
+.idea/
+
+# test files
+test.py
+test.txt
