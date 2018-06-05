@@ -26,5 +26,7 @@
     "572882": "/mnt/Data/College/Database/572882.csv",
     "575133": "/mnt/Data/College/Database/575133.csv",
     "600947": "/mnt/Data/College/Database/600947.csv"
-  }
+  },
+  "extracted_dir": "/mnt/Data/College/Database/extracted_data/"
+
 }
