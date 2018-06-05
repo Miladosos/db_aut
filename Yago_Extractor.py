@@ -24,21 +24,17 @@ class YagoExtractor:
             label_tag = None
 
             for label in yago_labels:
+                if name in label[3]:  # Match found !
+                    label_tag = label[1]
+                    break
 
-                if label_tag is None:  # Trying to match a name with yago labels
-                    if name in label[3]:
-                        label_tag = label[1]
-                        with open(file="./{}.tsv".format(label_tag),
-                                  mode='a') as label_file:  # Writing matched label to file
-                            label_file.write(str(label) + '\n')
-
-                else:  # trying to find other lines matched with tag
+            if label_tag:
+                for label in yago_labels:  # Search yago_labels from beginning to write matched lines into label's file
                     if label_tag == label[1]:
-                        with open(file="./{}.tsv".format(label_tag),
-                                  mode='a') as label_file:  # Writing matched label to file
+                        with open(file="./extracted_label/{}.tsv".format(label_tag), mode='a') as label_file:
                             label_file.write(str(label) + '\n')
-
-            return label_tag
+            
+        return label_tag
 
     def type(self, Name):
 
