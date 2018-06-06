@@ -44,11 +44,12 @@ class YagoExtractor:
 
         return label_tag
 
-    def type(self, tag):
+    def type(self, tag1, tag2=None):
         """
         Searching Yago type to find matched types and tags
 
-        :param tag: a type tag to search
+        :param tag1: a type tag to search
+        :param tag2: Optional tag
         :return: Nothing
         """
 
@@ -57,16 +58,23 @@ class YagoExtractor:
             yago_types = csv.reader(LabelFile, delimiter="\t")
 
             for line in yago_types:  # Searching Yago types
-                if set(tag) <= set(line):
-                    with open(file="{}[type]{}.tsv".format(self.extract_dir, tag),
-                              mode='a') as type_file:  # Writing matched tag and type to file
-                        type_file.write(str(line) + '\n')
+                if tag2:
+                    if (tag1 in line) and (tag2 in line):
+                        with open(file="{}[type]{}_{}.tsv".format(self.extract_dir, tag1[1:-1], tag2[1:-1]),
+                                  mode='a') as type_file:  # Writing matched tag and type to file
+                            type_file.write(str(line) + '\n')
+                else:
+                    if tag1 in line:
+                        with open(file="{}[type]{}.tsv".format(self.extract_dir, tag1),
+                                  mode='a') as type_file:  # Writing matched tag and type to file
+                            type_file.write(str(line) + '\n')
 
-    def fact(self, tag):
+    def fact(self, tag1, tag2=None):
         """
         Searching yago facts to find matched facts and tag
 
-        :param tag: a tag to search in facts
+        :param tag1: a tag to search in facts
+        :param tag2: Optional tag
         :return: Nothing
         """
 
@@ -75,7 +83,13 @@ class YagoExtractor:
             yago_facts = csv.reader(LabelFile, delimiter="\t")
 
             for line in yago_facts:  # Searching Yago facts
-                if set(tag) <= set(line):
-                    with open(file="{}[fact]{}.tsv".format(self.extract_dir, tag),
-                              mode='a') as fact_file:  # Writing matched tag and fact to file
-                        fact_file.write(str(line) + '\n')
+                if tag2:
+                    if (tag1 in line) and (tag2 in line):
+                        with open(file="{}[fact]{}_{}.tsv".format(self.extract_dir, tag1[1:-1], tag2[1:-1]),
+                                  mode='a') as fact_file:  # Writing matched tag and fact to file
+                            fact_file.write(str(line) + '\n')
+                else:
+                    if tag1 in line:
+                        with open(file="{}[fact]{}.tsv".format(self.extract_dir, tag1[1:-1]),
+                                  mode='a') as fact_file:  # Writing matched tag and fact to file
+                            fact_file.write(str(line) + '\n')
