@@ -57,7 +57,7 @@ class YagoExtractor:
             yago_types = csv.reader(LabelFile, delimiter="\t")
 
             for line in yago_types:  # Searching Yago types
-                if line[1] == tag:
+                if set(tag) <= set(line):
                     with open(file="{}[type]{}.tsv".format(self.extract_dir, tag),
                               mode='a') as type_file:  # Writing matched tag and type to file
                         type_file.write(str(line) + '\n')
@@ -75,7 +75,7 @@ class YagoExtractor:
             yago_facts = csv.reader(LabelFile, delimiter="\t")
 
             for line in yago_facts:  # Searching Yago facts
-                if line[1] == tag:
+                if set(tag) <= set(line):
                     with open(file="{}[fact]{}.tsv".format(self.extract_dir, tag),
                               mode='a') as fact_file:  # Writing matched tag and fact to file
                         fact_file.write(str(line) + '\n')
